@@ -1,6 +1,5 @@
 {
     "subconfigs": [
-        "src/client",
-        "src/compositor"
+        "src/client"
     ]
 }

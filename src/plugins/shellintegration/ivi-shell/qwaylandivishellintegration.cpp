@@ -45,6 +45,7 @@
 #include <unistd.h>
 
 QT_BEGIN_NAMESPACE
+#define QT_IVI_APPLICATION_ZORDER 20
 
 namespace QtWaylandClient {
 
@@ -129,7 +130,7 @@ QWaylandShellSurface *QWaylandIviShellIntegration::createShellSurface(QWaylandWi
     if (surfaceId == 0)
         return Q_NULLPTR;
 
-    struct ivi_surface *surface = m_iviApplication->surface_create(surfaceId, window->object());
+    struct ivi_surface *surface = m_iviApplication->surface_create(surfaceId, window->object(), window->window()->title(), QT_IVI_APPLICATION_ZORDER);
     if (!m_iviController)
         return new QWaylandIviSurface(surface, window);
 

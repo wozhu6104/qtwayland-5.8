@@ -133,7 +133,8 @@ void QWaylandIviApplicationPrivate::unregisterIviSurface(QWaylandIviSurface *ivi
 }
 
 void QWaylandIviApplicationPrivate::ivi_application_surface_create(QtWaylandServer::ivi_application::Resource *resource,
-                                                                   uint32_t ivi_id, wl_resource *surfaceResource, uint32_t id)
+                                                                   uint32_t ivi_id, wl_resource *surfaceResource,
+                                                                   const QString &window_title, uint32_t zorder, uint32_t id)
 {
     Q_Q(QWaylandIviApplication);
     QWaylandSurface *surface = QWaylandSurface::fromResource(surfaceResource);
