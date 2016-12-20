@@ -1274,7 +1274,14 @@
 	raised.
       </description>
       <arg name="scale" type="int"/>
-    </request>
+	</request>
+
+	<request name="set_zorder">
+	  <description summary="sets wl_surface zorder">
+	  </description>
+	  <arg name="window_title" type="string"/>
+	  <arg name="zorder" type="int"/>
+	</request>
    </interface>
 
   <interface name="wl_seat" version="4">
